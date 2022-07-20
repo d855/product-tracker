@@ -22,7 +22,6 @@
             $bestBuy = Retailer::create(['name' => 'Best Buy']);
 
             $this->assertFalse($switch->inStock());
-            //        $bestBuy->haveStock($switch);
 
             $stock = new Stock([
                 'price' => 1000,
