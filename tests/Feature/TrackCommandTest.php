@@ -24,8 +24,7 @@ class TrackCommandTest extends TestCase
 
         Http::fake(fn() => [ 'available' => true, 'price' => 2990 ]);
 
-        $this->artisan('track')
-            ->expectsOutput('All done!');
+        $this->artisan('track');
 
         $this->assertTrue(Product::first()->inStock());
     }
